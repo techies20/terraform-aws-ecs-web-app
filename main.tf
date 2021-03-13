@@ -160,7 +160,7 @@ module "ecs_alb_service_task" {
 
 module "ecs_codepipeline" {
   enabled = var.codepipeline_enabled
-  source  = "cloudposse/ecs-codepipeline/aws"
+  source  = "git::https://github.com/dockerya/terraform-aws-ecs-codepipeline.git"
   version = "0.23.0"
 
   region                      = coalesce(var.region, data.aws_region.current.name)
